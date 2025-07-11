@@ -1,0 +1,42 @@
+{
+  "name": "portfolio-website",
+  "version": "1.0.0",
+  "description": "A modern, fully responsive portfolio website built with HTML5, CSS3, and JavaScript",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "dev": "python3 -m http.server 8000",
+    "build": "echo 'No build process needed for static site'",
+    "test": "echo 'No tests specified'",
+    "deploy": "echo 'Configure deployment command for your hosting platform'"
+  },
+  "keywords": [
+    "portfolio",
+    "website",
+    "responsive",
+    "html5",
+    "css3",
+    "javascript",
+    "web-development",
+    "frontend",
+    "personal-website"
+  ],
+  "author": "Siddhartha Srivastava <realsiddhartha@outlook.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sid-2209/portfolio-website"
+  },
+  "homepage": "https://portfolio-website-sid.vercel.app",
+  "bugs": {
+    "url": "https://github.com/sid-2209/portfolio-website/issues"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+} 

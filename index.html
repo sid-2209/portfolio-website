@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI/ML Developer portfolio showcasing projects in machine learning, deep learning, and data science">
+    <meta name="keywords" content="portfolio, AI, ML, machine learning, deep learning, data science, artificial intelligence, python, tensorflow, pytorch">
+    <meta name="author" content="Siddhartha Srivastava">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://portfolio-website-sid.vercel.app/">
+    <meta property="og:title" content="Siddhartha Srivastava - AI/ML Developer Portfolio">
+    <meta property="og:description" content="AI/ML Developer portfolio showcasing projects in machine learning, deep learning, and data science">
+    <meta property="og:image" content="assets/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://portfolio-website-sid.vercel.app/">
+    <meta property="twitter:title" content="Siddhartha Srivastava - AI/ML Developer Portfolio">
+    <meta property="twitter:description" content="AI/ML Developer portfolio showcasing projects in machine learning, deep learning, and data science">
+    <meta property="twitter:image" content="assets/og-image.jpg">
+
+    <title>Siddhartha Srivastava - AI/ML Developer Portfolio</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar__header">
+            <div class="sidebar__brand">
+                <a href="#home" class="sidebar__logo">Portfolio</a>
+            </div>
+            <button class="sidebar__close" id="sidebar-close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+        </div>
+        
+        <nav class="sidebar__nav">
+            <ul class="sidebar__list">
+                <li class="sidebar__item">
+                    <a href="#home" class="sidebar__link active-link">
+                        <div class="sidebar__icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" stroke="currentColor" stroke-width="2"/>
+                                <polyline points="9,22 9,12 15,12 15,22" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <span class="sidebar__text">Home</span>
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a href="#about" class="sidebar__link">
+                        <div class="sidebar__icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <span class="sidebar__text">About Me</span>
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a href="#skills" class="sidebar__link">
+                        <div class="sidebar__icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <polygon points="12,2 22,8.5 22,15.5 12,22 2,15.5 2,8.5" stroke="currentColor" stroke-width="2"/>
+                                <path d="M12 22V12M22 8.5L12 15L2 8.5" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <span class="sidebar__text">Skills</span>
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a href="#projects" class="sidebar__link">
+                        <div class="sidebar__icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <span class="sidebar__text">Projects</span>
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a href="#contact" class="sidebar__link">
+                        <div class="sidebar__icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/>
+                                <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <span class="sidebar__text">Contact</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+        <div class="sidebar__footer">
+            <!-- Dark Mode Toggle -->
+            <div class="theme-toggle">
+                <div class="theme-switch" id="sidebar-theme-toggle" role="button" tabindex="0" aria-label="Toggle dark mode">
+                    <span class="theme-switch__label theme-switch__label--light">LIGHT</span>
+                    <div class="theme-switch__track">
+                        <div class="theme-switch__thumb"></div>
+                    </div>
+                    <span class="theme-switch__label theme-switch__label--dark">DARK</span>
+                </div>
+            </div>
+            
+            <div class="sidebar__social">
+                <a href="https://www.linkedin.com/in/realsiddhartha" class="sidebar__social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z" stroke="currentColor" stroke-width="2"/>
+                        <rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </a>
+                <a href="https://www.github.com/sid-2209" class="sidebar__social-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Sidebar Toggle for Mobile -->
+    <button class="sidebar__toggle" id="sidebar-toggle">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+    </button>
+
+    <!-- Sidebar Overlay -->
+    <div class="sidebar__overlay" id="sidebar-overlay"></div>
+
+    <!-- Top Header Bar -->
+    <header class="top-header">
+        <div class="top-header__container">
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <div class="search-bar__container">
+                    <svg class="search-bar__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/>
+                        <path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <input type="text" class="search-bar__input" placeholder="What're you looking for?" id="search-input">
+                </div>
+                <div class="search-results" id="search-results"></div>
+            </div>
+
+            <!-- Date Time Display -->
+            <div class="datetime-display">
+                <span class="datetime-display__text" id="datetime-text">GMT / 09:45:11 AM    Sun 24/07/2024</span>
+            </div>
+
+            <!-- Social Links -->
+            <div class="social-links">
+                <a href="#" class="social-links__item" title="Resume">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" stroke="currentColor" stroke-width="2"/>
+                        <polyline points="14,2 14,8 20,8" stroke="currentColor" stroke-width="2"/>
+                        <line x1="16" y1="13" x2="8" y2="13" stroke="currentColor" stroke-width="2"/>
+                        <line x1="16" y1="17" x2="8" y2="17" stroke="currentColor" stroke-width="2"/>
+                        <polyline points="10,9 9,9 8,9" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <span class="social-links__text">Resume</span>
+                </a>
+                <a href="https://www.linkedin.com/in/realsiddhartha" class="social-links__item" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z" stroke="currentColor" stroke-width="2"/>
+                        <rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <span class="social-links__text">LinkedIn</span>
+                </a>
+                <a href="https://www.github.com/sid-2209" class="social-links__item" title="GitHub" target="_blank" rel="noopener noreferrer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <span class="social-links__text">GitHub</span>
+                </a>
+                <a href="https://www.instagram.com/realsiddhartha" class="social-links__item" title="Instagram" target="_blank" rel="noopener noreferrer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="2"/>
+                        <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" stroke="currentColor" stroke-width="2"/>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <span class="social-links__text">Instagram</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero section" id="home">
+            <div class="hero__container container">
+                <div class="hero__content">
+                    <div class="hero__greeting">HI STRANGER ,</div>
+                    <h1 class="hero__title">
+                        I am <span class="hero__name">Siddhartha</span>
+                    </h1>
+                    <p class="hero__subtitle">AI/ML Developer.</p>
+                    <p class="hero__description">
+                        I build AI that solves real problems<br>
+                        with clean code.
+                    </p>
+                    <div class="hero__buttons">
+                        <a href="#projects" class="button button--primary">View My Work</a>
+                        <a href="#contact" class="button button--secondary">Get In Touch</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about section" id="about">
+            <div class="container">
+                <h2 class="section__title">About Me</h2>
+                <div class="about__container">
+                    <div class="about__content">
+                        <p class="about__text">
+                            I'm a Computer Science student with a strong focus on Artificial Intelligence and Data
+                            Science, having developed my skills in Python, algorithms, and advanced AI technologies, 
+                            including a deep understanding of ChatGPT. My proficiency in Git and GitHub underscores my 
+                            ability to collaborate effectively on complex projects in fast-paced environments.
+                        </p>
+                        <p class="about__text">
+                            While tech is my main game, I love English literature, history, and geopolitics too. 
+                            These interests sharpen my thinking and problem-solving. Looking ahead, I'm all in for 
+                            diving into the AI and data science industry, ready to work on cool projects that mix 
+                            tech innovation with making a difference.
+                        </p>
+                        <div class="about__stats">
+                            <div class="about__stat">
+                                <span class="about__stat-number">1+</span>
+                                <span class="about__stat-label">Years Experience</span>
+                            </div>
+                            <div class="about__stat">
+                                <span class="about__stat-number">10+</span>
+                                <span class="about__stat-label">Projects Completed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills section" id="skills">
+            <div class="container">
+                <h2 class="section__title">Skills</h2>
+                <div class="skills__container">
+                    <div class="skills__category">
+                        <h3 class="skills__category-title">Languages</h3>
+                        <div class="skills__list">
+                            <div class="skill__item">
+                                <span class="skill__name">Python</span>
+                                <div class="skill__bar">
+                                    <div class="skill__progress" style="width: 90%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill__item">
+                                <span class="skill__name">R</span>
+                                <div class="skill__bar">
+                                    <div class="skill__progress" style="width: 75%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill__item">
+                                <span class="skill__name">JavaScript</span>
+                                <div class="skill__bar">
+                                    <div class="skill__progress" style="width: 75%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill__item">
+                                <span class="skill__name">SQL</span>
+                                <div class="skill__bar">
+                                    <div class="skill__progress" style="width: 80%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills__category">
+                        <h3 class="skills__category-title">Frameworks & Tools</h3>
+                        <div class="skills__list">
+                            <div class="skill__item">
+                                <span class="skill__name">TensorFlow</span>
+                                <div class="skill__bar">
+                                    <div class="skill__progress" style="width: 80%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill__item">
+                                <span class="skill__name">PyTorch</span>
+                                <div class="skill__bar">
+                                    <div class="skill__progress" style="width: 75%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill__item">
+                                <span class="skill__name">Keras</span>
+                                <div class="skill__bar">
+                                    <div class="skill__progress" style="width: 70%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill__item">
+                                <span class="skill__name">Scikit-learn</span>
+                                <div class="skill__bar">
+                                    <div class="skill__progress" style="width: 70%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill__item">
+                                <span class="skill__name">Git</span>
+                                <div class="skill__bar">
+                                    <div class="skill__progress" style="width: 70%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill__item">
+                                <span class="skill__name">Docker</span>
+                                <div class="skill__bar">
+                                    <div class="skill__progress" style="width: 65%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill__item">
+                                <span class="skill__name">Jupyter</span>
+                                <div class="skill__bar">
+                                    <div class="skill__progress" style="width: 65%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills__category">
+                        <h3 class="skills__category-title">Version Control & DevOps</h3>
+                        <div class="skills__list">
+                            <div class="skill__item">
+                                <span class="skill__name">Git</span>
+                                <div class="skill__bar">
+                                    <div class="skill__progress" style="width: 85%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill__item">
+                                <span class="skill__name">CI/CD</span>
+                                <div class="skill__bar">
+                                    <div class="skill__progress" style="width: 70%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill__item">
+                                <span class="skill__name">Kubernetes</span>
+                                <div class="skill__bar">
+                                    <div class="skill__progress" style="width: 65%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill__item">
+                                <span class="skill__name">REST APIs</span>
+                                <div class="skill__bar">
+                                    <div class="skill__progress" style="width: 80%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills__category">
+                        <h3 class="skills__category-title">Data Analysis</h3>
+                        <div class="skills__list">
+                            <div class="skill__item">
+                                <span class="skill__name">Pandas</span>
+                                <div class="skill__bar">
+                                    <div class="skill__progress" style="width: 90%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill__item">
+                                <span class="skill__name">NumPy</span>
+                                <div class="skill__bar">
+                                    <div class="skill__progress" style="width: 85%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill__item">
+                                <span class="skill__name">Matplotlib</span>
+                                <div class="skill__bar">
+                                    <div class="skill__progress" style="width: 80%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects section" id="projects">
+            <div class="container">
+                <h2 class="section__title">My Projects</h2>
+                <div class="projects__container">
+                    <article class="project__card">
+                        <div class="project__image">
+                            <img src="assets/project-1.jpg" alt="Project 1" class="project__img">
+                        </div>
+                        <div class="project__content">
+                            <h3 class="project__title">Cross-Language Voice Cloning</h3>
+                            <p class="project__description">
+                                Developed a deep learning system for multi-language voice cloning using 
+                                Tacotron 2 and WaveNet, trained on VCTK and Mozilla Common Voice datasets. 
+                                Achieved high-quality speech synthesis with speaker embeddings for virtual 
+                                assistants and accessibility tools.
+                            </p>
+                            <div class="project__technologies">
+                                <span class="project__tech">Python</span>
+                                <span class="project__tech">TensorFlow</span>
+                                <span class="project__tech">Tacotron 2</span>
+                                <span class="project__tech">WaveNet</span>
+                                <span class="project__tech">NumPy</span>
+                                <span class="project__tech">Librosa</span>
+                            </div>
+                            <div class="project__links">
+                                <a href="https://github.com/sid-2209/lang-x" class="project__link" target="_blank" rel="noopener noreferrer">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project__card">
+                        <div class="project__image">
+                            <img src="assets/project-2.jpg" alt="Project 2" class="project__img">
+                        </div>
+                        <div class="project__content">
+                            <h3 class="project__title">Job-Bridge</h3>
+                            <p class="project__description">
+                                Built an AI platform for resume parsing and job matching using NLP and 
+                                intelligent document processing. Delivered personalized job recommendations 
+                                by scoring candidate-job compatibility.
+                            </p>
+                            <div class="project__technologies">
+                                <span class="project__tech">Python</span>
+                                <span class="project__tech">NLTK</span>
+                                <span class="project__tech">Textract</span>
+                                <span class="project__tech">Scikit-learn</span>
+                                <span class="project__tech">Pandas</span>
+                                <span class="project__tech">Flask</span>
+                                <span class="project__tech">SQL</span>
+                            </div>
+                            <div class="project__links">
+                                <a href="https://github.com/sid-2209/job-bridge-ai" class="project__link" target="_blank" rel="noopener noreferrer">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="project__card">
+                        <div class="project__image">
+                            <img src="assets/project-2.jpg" alt="Project 2" class="project__img">
+                        </div>
+                        <div class="project__content">
+                            <h3 class="project__title">AI-Powered Interview Prep Assistant</h3>
+                            <p class="project__description">
+                                Developed an AI-driven assistant that generates tailored interview questions 
+                                and solutions based on user-selected job roles and experience levels. Built 
+                                with FastAPI, NLTK, and OpenAI for dynamic question generation and Flask for 
+                                potential web interfaces.
+                            </p>
+                            <div class="project__technologies">
+                                <span class="project__tech">Python</span>
+                                <span class="project__tech">FastAPI</span>
+                                <span class="project__tech">Flask</span>
+                                <span class="project__tech">NLTK</span>
+                                <span class="project__tech">OpenAI API</span>
+                                <span class="project__tech">Pydantic</span>
+                                <span class="project__tech">HTTPX</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project__card">
+                        <div class="project__image">
+                            <img src="assets/project-3.jpg" alt="Project 3" class="project__img">
+                        </div>
+                        <div class="project__content">
+                            <h3 class="project__title">User Management App</h3>
+                            <p class="project__description">
+                                Developed a user management app with secure authentication and 
+                                role-based access using Next.js and NextAuth.js. Integrated Prisma 
+                                with MongoDB and PostgreSQL for efficient user data management and 
+                                styled with Tailwind CSS for a responsive UI.
+                            </p>
+                            <div class="project__technologies">
+                                <span class="project__tech">Next.js</span>
+                                <span class="project__tech">React</span>
+                                <span class="project__tech">React DOM</span>
+                                <span class="project__tech">Node.js</span>
+                                <span class="project__tech">NextAuth.js</span>
+                                <span class="project__tech">Prisma</span>
+                                <span class="project__tech">MongoDB</span>
+                                <span class="project__tech">Tailwind CSS</span>
+                                <span class="project__tech">bcryptjs</span>
+                            </div>
+                            <div class="project__links">
+                                <a href="https://github.com/sid-2209/user-management-app/tree/main" class="project__link">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact section" id="contact">
+            <div class="container">
+                <h2 class="section__title">Get In Touch</h2>
+                <div class="contact__container">
+                    <div class="contact__info">
+                        <h3 class="contact__title">Let's work together</h3>
+                        <p class="contact__description">
+                            I'm always interested in new opportunities and exciting projects. 
+                            Let's discuss how we can bring your ideas to life.
+                        </p>
+                        <div class="contact__items">
+                            <div class="contact__item">
+                                <div class="contact__icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3 5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5z" stroke="currentColor" stroke-width="2"/>
+                                        <polyline points="3,5 12,12 21,5" stroke="currentColor" stroke-width="2"/>
+                                    </svg>
+                                </div>
+                                <div class="contact__data">
+                                    <span class="contact__label">Email</span>
+                                    <span class="contact__value">realsiddhartha@outlook.com</span>
+                                </div>
+                            </div>
+                            <div class="contact__item">
+                                <div class="contact__icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0-6 0z" stroke="currentColor" stroke-width="2"/>
+                                        <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 0 1-2.827 0l-4.244-4.243a8 8 0 1 1 11.314 0z" stroke="currentColor" stroke-width="2"/>
+                                    </svg>
+                                </div>
+                                <div class="contact__data">
+                                    <span class="contact__label">Location</span>
+                                    <span class="contact__value">Delhi, India</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="contact__form" id="contact-form">
+                        <div class="form__group">
+                            <input type="text" class="form__input" placeholder="Your Name" required>
+                        </div>
+                        <div class="form__group">
+                            <input type="email" class="form__input" placeholder="Your Email" required>
+                        </div>
+                        <div class="form__group">
+                            <input type="text" class="form__input" placeholder="Subject" required>
+                        </div>
+                        <div class="form__group">
+                            <textarea class="form__input form__textarea" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="button button--primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__info">
+                    <h3 class="footer__title">Siddhartha Srivastava</h3>
+                    <p class="footer__description">AI/ML Developer</p>
+                </div>
+                <div class="footer__social">
+                    <a href="https://www.linkedin.com/in/realsiddhartha" class="footer__social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" stroke="currentColor" stroke-width="2"/>
+                            <rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.github.com/sid-2209" class="footer__social-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copy">© 2025 Siddhartha Srivastava. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <a href="#home" class="scroll-top" id="scroll-top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 15l-6-6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </a>
+
+    <!-- JavaScript Modules -->
+    <script type="module" src="js/app.js"></script>
+    
+    <!-- Fallback for older browsers -->
+    <script nomodule src="js/main.js"></script>
+</body>
+</html> 

@@ -1,0 +1,19 @@
+PLACEHOLDER IMAGES NEEDED:
+
+1. hero-image.jpg (300x300px) - Professional headshot/profile photo
+2. project-1.jpg (400x200px) - Screenshot of e-commerce project
+3. project-2.jpg (400x200px) - Screenshot of task management app
+4. project-3.jpg (400x200px) - Screenshot of weather dashboard
+5. og-image.jpg (1200x630px) - Social media preview image
+6. favicon.ico (32x32px) - Website favicon
+
+You can replace these placeholder references with actual images:
+- Use high-quality, optimized images (WebP format recommended)
+- Ensure all images are properly compressed for web
+- Add alt text for accessibility
+- Consider using a CDN for better performance
+
+For now, you can use placeholder services like:
+- https://picsum.photos/ for random images
+- https://via.placeholder.com/ for solid color placeholders
+- https://unsplash.com/ for professional stock photos 
